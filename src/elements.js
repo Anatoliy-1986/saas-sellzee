@@ -6,6 +6,9 @@ height: 62px;
 font-size:20px;
 text-align: center;
 color: white;
-background-color: ${(props) => (!!props.type && props.type === 'secondary') ? 'transparent' : '#FF5A05'}
+background-color: ${props => props.secondary ? 'none' : '#FF5A05'};
+
 border: none;
 `;
+
+//${(props) => (!!props.type && props.type === 'secondary') ? 'none' : '#FF5A05'};

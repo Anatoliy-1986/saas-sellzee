@@ -1,16 +1,14 @@
 import React from 'react';
-import './App.css';
-import {Button} from './elements'
-import ButtonGetStarted from './ButtonGetStarted';
-import styled, { css } from 'styled-components';
+import About from './components/about/index';
+import GlobalStyles from './GlobalStyles';
 
 function App() {
 
-  
-
   return (
-  <Button type="main">добавить</Button>
-    
+  <>
+  <GlobalStyles />
+  <About />
+  </>
   );
 }
 
