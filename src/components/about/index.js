@@ -2,14 +2,6 @@ import React from 'react';
 import pad from './pad.png';
 import logo from './logo.png';
 import {Div, Button, Flex, Link, Paragraph, Line, Image} from './elements'; 
-/*import {Button} from './elements';
-import {Flex} from './elements'; 
-import {Link} from './elements'; 
-import {Paragraph} from './elements';
-import {Line} from './elements';
-import {Image} from './elements';*/
-
-
 
 
 function About () {
