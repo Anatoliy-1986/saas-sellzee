@@ -1,47 +1,57 @@
-import React from 'react';
-import pad from './pad.png';
-import logo from './logo.png';
-import {Div, Button, Flex, Link, Paragraph, Line, Image} from './elements'; 
+import React from "react";
+import pad from "./pad.png";
+import logo from "./logo.png";
+import { Container, Wrapper, Header, Menu, Button, ViewBlock, Title, SubTitle, Description, Information, Navigetion, Link, Line, Image } from "./elements";
 
-
-function About () {
-
-    return (
-        <>
-        <Div>
-        <Flex width="1134px" direction="column" margin=" 0 auto">
-        <Flex justify="space-between" align="center">
-        <img src={logo} alt="logo" height="43px"/>
-        <Flex align="center" justify="space-between" >
-         <Link href="#" padding="29px">Home</Link>
-         <Link href="#" padding="29px">About</Link>
-         <Link href="#" padding="29px">Contact</Link>
-         <Link href="#" padding="29px">Testimonial</Link>
-         <Link href="#">Priceing</Link>
-         </Flex>
-         <Button>Get Started</Button> 
-        </Flex>
-
-        <Flex>
-        <Flex direction="column" margin="72px 0 90px" width="390px">
-        <Paragraph>Inspiration Technology.</Paragraph>
-        <Paragraph size="61px" secondary margin="20px 0 0"><strong>Runs faster.</strong> Costs less and never breaks.</Paragraph>
-        <Line></Line>
-        <Paragraph size="16px" secondary margin="20px 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien
-             lectus sit tristique rhoncus, nisi, malesuada. Tellus consequat</Paragraph>
-             <Flex justify="space-between" margin="43px 0 0">
-             <Button>Get Started</Button>
-             <Button secondary>Free Trail</Button>
-             </Flex>
-             </Flex>
-        <Flex>
-        <Image src={pad} alt="pad" />
-        </Flex>
-        </Flex>
-        </Flex>
-        </Div>
-        </>
-    )
+function About() {
+  return (
+    <>
+      <Container>
+        <Wrapper>
+          <Header>
+            <img src={logo} alt="logo" height="43px" />
+            <Menu align="center" justify="space-between">
+              <Link href="#">
+                Home
+              </Link>
+              <Link href="#">
+                About
+              </Link>
+              <Link href="#">
+                Contact
+              </Link>
+              <Link href="#">
+                Testimonial
+              </Link>
+              <Link href="#" secondary>Priceing</Link>
+            </Menu>
+            <Button>Get Started</Button>
+          </Header>
+          <ViewBlock>
+            <Information>
+              <Title>Inspiration Technology.</Title>
+              <SubTitle>
+                <strong>Runs faster.</strong> Costs less and never breaks.
+              </SubTitle>
+              <Line></Line>
+              <Description>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                sapien lectus sit tristique rhoncus, nisi, malesuada. Tellus
+                consequat
+              </Description>
+              <Navigetion>
+                <Button>Get Started</Button>
+                <Button secondary>Free Trail</Button>
+              </Navigetion>
+            </Information>
+            
+              <Image src={pad} alt="pad" />
+            
+          </ViewBlock>
+        </Wrapper>
+      </Container>
+    </>
+  );
 }
-  
-  export default About;
+
+export default About;
