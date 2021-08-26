@@ -9,7 +9,6 @@ import Microsoft from "./images/Microsoft.png";
 import ola from "./images/ola.png";
 import walmart from "./images/walmart.png";
 import check from "./images/check.png";
-import Line from "./images/Line.png";
 import Plus from "./images/Plus.png";
 import John from "./images/John.png";
 import Ann from "./images/Ann.png";
@@ -21,7 +20,6 @@ import {
   Wrapper,
   Header,
   Button,
-  Flex,
   Link,
   ViewBlock,
   Title,

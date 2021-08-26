@@ -6,6 +6,7 @@ export const Сontainer = styled.div`
   background: #ffffff;
   position: relative;
   padding: 0;
+  margin: 0;
 `;
 
 export const Wrapper = styled.div`

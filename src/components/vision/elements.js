@@ -1,63 +1,67 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
+export const Container = styled.div`
   background: #fff9f5;
-  position: relative;
+  margin: 0;
   padding: 0;
+  
 `;
 
-export const Flex = styled.div`
+export const Wrapper = styled.div`
   display: flex;
-  flex-direction: ${(props) => props.direction || "row"};
-  align-items: ${(props) => props.align || "stretch"};
-  justify-content: ${(props) => props.justify || "stretch"};
-  margin: ${({ margin }) => margin || "0"};
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+  max-width: 1134px;
+  margin: 0 auto ;
+  padding: 54px 0 74px 0;
+`;
+
+
+export const ViewBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 358px;
+  height: 265px;
+  margin: 30px 0 0;
+  justify-content: ${(props) => props.justify || "space-around"};
+  padding: ${({ padding }) => padding || "20px 69px 20px 38px"};
+  background: ${({ background }) => background || "none"};
+  border: ${({ border }) => border || "2px solid rgba(66, 82, 207, 0.1)"};
+  color: ${({ color }) => color || "#05000B"};
+  border-radius: 10px;
   position: relative;
   box-sizing: border-box;
-  max-width: ${({ width }) => width || "100%"};
-  background-image: url(${({ backimage }) => backimage || "none"});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-`;
-export const Paragraph = styled.div`
-  line-height: ${({ height }) => height || "160%"};
-  font-size: ${({ size }) => size || "20px"};
-  text-transform: ${(props) => (props.secondary ? "none" : "uppercase")};
-  color: ${(props) => (props.secondary ? "#05000B" : "#FF5A05")};
-  margin: ${({ margin }) => margin || "0"};
 `;
 
-export const Button = styled.button`
-  width: 169px;
-  height: 62px;
-  font-size: 20px;
-  text-align: center;
-  color: white;
-  background-color: ${(props) => (props.secondary ? "transparent" : "#FF5A05")};
-  border-radius: 4px;
-  border: ${(props) => (props.secondary ? "1px solid white" : "none")};
+export const Discription = styled.div`
+font-weight: 500;
+font-size: 16px;
+line-height: 160%;
+opacity: 0.7;
+margin-top: ${({ margin }) => margin || "0"};
 `;
 
-export const Link = styled.div`
-  width: 261px;
-  height: 82px;
-  text-align: center;
-  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.08);
-  background-color: ${(props) => (props.secondary ? "#4252CF" : "#FFFFFF")};
+export const Title = styled.div`
+font-weight: 600;
+font-size: 20px;
+line-height: 160%;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #FF5A05;
 `;
 
-export const Image = styled.img`
-  position: ${(props) => (props.secondary ? "absolute" : "static")};
-  top: ${({ top }) => top || "0"};
-  left: ${({ left }) => left || "0"};
-  bottom: ${({ bottom }) => bottom || "0"};
-  right: ${({ right }) => right || "0"};
-  box-sizing: border-box;
+export const SubTitle = styled.div`
+font-weight: bold;
+font-size: 31px;
+line-height: 130%;
+margin-top: 15px;
 `;
 
-export const Img = styled.img`
-  align-self: center;
-  padding-top: ${({ padding }) => padding || "18px"};
-  margin: ${({ margin }) => margin || "0"};
+export const Label = styled.div`
+font-weight: 600;
+font-size: 20px;
+line-height: 160%;
 `;
