@@ -4,6 +4,8 @@ import Platforms from "./components/platforms/index";
 import Vision from "./components/vision/index";
 import GlobalStyles from "./GlobalStyles";
 
+
+
 function App() {
   return (
     <>

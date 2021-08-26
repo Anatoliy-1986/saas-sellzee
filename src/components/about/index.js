@@ -1,7 +1,22 @@
 import React from "react";
 import pad from "./pad.png";
 import logo from "./logo.png";
-import { Container, Wrapper, Header, Menu, Button, ViewBlock, Title, SubTitle, Description, Information, Navigetion, Link, Line, Image } from "./elements";
+import {
+  Container,
+  Wrapper,
+  Header,
+  Menu,
+  Button,
+  ViewBlock,
+  Title,
+  SubTitle,
+  Description,
+  Information,
+  Navigetion,
+  Link,
+  Line,
+  Image,
+} from "./elements";
 
 function About() {
   return (
@@ -11,19 +26,13 @@ function About() {
           <Header>
             <img src={logo} alt="logo" height="43px" />
             <Menu align="center" justify="space-between">
-              <Link href="#">
-                Home
+              <Link href="#">Home</Link>
+              <Link href="#">About</Link>
+              <Link href="#">Contact</Link>
+              <Link href="#">Testimonial</Link>
+              <Link href="#" secondary>
+                Priceing
               </Link>
-              <Link href="#">
-                About
-              </Link>
-              <Link href="#">
-                Contact
-              </Link>
-              <Link href="#">
-                Testimonial
-              </Link>
-              <Link href="#" secondary>Priceing</Link>
             </Menu>
             <Button>Get Started</Button>
           </Header>
@@ -44,9 +53,7 @@ function About() {
                 <Button secondary>Free Trail</Button>
               </Navigetion>
             </Information>
-            
-              <Image src={pad} alt="pad" />
-            
+            <Image src={pad} alt="pad" />
           </ViewBlock>
         </Wrapper>
       </Container>

@@ -52,17 +52,17 @@ export const Button = styled.button`
 `;
 
 export const ViewBlock = styled.div`
-display: flex;
-position: relative;
-box-sizing: border-box;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
 `;
 
 export const Information = styled.div`
-display: flex;
-flex-direction: column;
-margin: 72px 0 90px;
-box-sizing: border-box;
-max-width: 418px;
+  display: flex;
+  flex-direction: column;
+  margin: 72px 0 90px;
+  box-sizing: border-box;
+  max-width: 418px;
 `;
 
 export const Title = styled.div`
@@ -100,8 +100,8 @@ export const Navigetion = styled.div`
 `;
 
 export const Image = styled.img`
-position:absolute;
-top: 47px;
-left: 525px;
-box-sizing: border-box;
+  position: absolute;
+  top: 47px;
+  left: 525px;
+  box-sizing: border-box;
 `;

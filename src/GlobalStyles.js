@@ -6,6 +6,8 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Inter', sans-serif;
   }
+
 `;
+
  
 export default GlobalStyles;

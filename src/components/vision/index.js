@@ -2,7 +2,7 @@ import React from "react";
 
 import Lamp from "./images/Lamp.png";
 import Blog from "./images/Blog.png";
-import { Div, Button, Flex, Link, Paragraph, Line, Image } from "./elements";
+import { Div,  Flex, Link, Paragraph, Image } from "./elements";
 
 function Vision() {
   return (
