@@ -68,11 +68,75 @@ export const Heading = styled.div`
 export const Textreview = styled.div`
   position: absolute;
   top: 160px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 655px;
   height: 236px;
   background: #ffffff;
   box-shadow: 13px 13px 31px rgba(0, 0, 0, 0.05);
+`;
+
+export const Rating = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+`;
+
+export const Star = styled.div`
+  width: 0;
+  height: 0;
+  margin: 30px 0;
+  color: #fc2e5a;
+  position: relative;
+  display: block;
+  border-right: 15px solid transparent;
+  border-bottom: 10.5px solid
+    ${(prop) => (prop.secondary ? "#FFE816" : "#FFF9C7")};
+  border-left: 15px solid transparent;
+  margin-left: 10px;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  &:before {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -6.75px;
+    left: -9.75px;
+    border-bottom: 12px solid
+      ${(prop) => (prop.secondary ? "#FFE816" : "#FFF9C7")};
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    content: "";
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+  }
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 0.45px;
+    left: -15.75px;
+    color: #fc2e5a;
+    border-right: 15px solid transparent;
+    border-bottom: 10.5px solid
+      ${(prop) => (prop.secondary ? "#FFE816" : "#FFF9C7")};
+    border-left: 15px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+  }
 `;
 
 export const Requisites = styled.div`
@@ -105,7 +169,7 @@ export const Text = styled.div`
   font-style: italic;
   font-size: 16px;
   line-height: 160%;
-  margin: 132px 0 0 30px;
+  padding: 20px 110px 30px 30px;
 `;
 
 export const User = styled.div`
@@ -120,6 +184,10 @@ export const User = styled.div`
 
   &:before {
     content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
     font-size: 200pt;
     text-align: center;
     line-height: 260px;
@@ -150,7 +218,7 @@ export const Sliderleft = styled.button`
   transform: matrix(-1, 0, 0, 1, 0, 0);
   border: none;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
 `;
 
@@ -161,6 +229,6 @@ export const Sliderright = styled.button`
   border-radius: 62.5px 62.5px 62.5px 0px;
   border: none;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
 `;

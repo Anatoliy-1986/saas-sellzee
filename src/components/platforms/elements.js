@@ -317,13 +317,13 @@ export const LineBefore = styled.div`
   &:before {
     content: "";
     position: absolute;
-    background: url(${ Line });
+    background: url(${Line});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
-    }
+  }
 `;
 
 export const TrackRecord = styled.div`

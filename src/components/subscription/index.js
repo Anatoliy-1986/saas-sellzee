@@ -1,27 +1,82 @@
 import React from "react";
+import Check from "./images/Check.png";
 import {
-    Container,
-    Wrapper,
-    Title,
-    Period,
-    Month,
-    Year,
-  } from "./elements";
+  Container,
+  Wrapper,
+  Title,
+  Period,
+  Month,
+  Year,
+  Standard,
+  Headline,
+  Price,
+  Pack,
+  Equipment,
+  Description,
+  Instal,
+  ViewBlock,
+  Characteristic,
+} from "./elements";
+
+const packs = [
+  {
+    id: 1,
+    type: "Standard",
+    price: "$29",
+    pack: "monthly pack",
+    href: "https://yandex.ru/",
+  },
+  {
+    id: 2,
+    type: "Standard",
+    price: "$39",
+    pack: "monthly pack",
+    href: "https://www.google.ru/",
+  },
+];
+
+const specifications = [
+  "256 GB SSD STORE",
+  "FULL UI KIT DOWNLOAD",
+  "PUBLIC API",
+  "FULL UI PACK DOWNLOAD",
+  "24/7 SUPPORT",
+];
 
 function Subscription() {
-    return (
-      <>
-        <Container>
+  return (
+    <>
+      <Container>
         <Wrapper>
-            <Title>Without Extra Charge Choose Your Best Plan</Title>
-              <Period>
-                <Month> Monthly </Month>
-                <Year> Yearly </Year>
-              </Period>
+          <Title>Without Extra Charge Choose Your Best Plan</Title>
+          <Period>
+            <Month> Monthly </Month>
+            <Year> Yearly </Year>
+          </Period>
+          <ViewBlock>
+            {packs.map((item, id) => (
+              <Standard key={item.id}>
+                <Headline>{item.type}</Headline>
+                <Price>{item.price}</Price>
+                <Pack>{item.pack}</Pack>
+                <Characteristic>
+                  {specifications.map((item, index) => (
+                    <Equipment key={index}>
+                      <img src={Check} alt="check" />
+                      <Description>{item}</Description>
+                    </Equipment>
+                  ))}
+                </Characteristic>
+                <form action={item.href}>
+                  <Instal>Install Pack</Instal>
+                </form>
+              </Standard>
+            ))}
+          </ViewBlock>
         </Wrapper>
       </Container>
-      </>
-    );
-  }
-  
-  export default Subscription;
+    </>
+  );
+}
+
+export default Subscription;

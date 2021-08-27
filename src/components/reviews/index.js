@@ -17,6 +17,8 @@ import {
   Sliderleft,
   Sliderright,
   Slider,
+  Star,
+  Rating,
 } from "./elements";
 
 function Reviews() {
@@ -35,7 +37,7 @@ function Reviews() {
             <Review>
               <Heading>What People Say About Us</Heading>
               <Slider>
-                <Sliderleft>  &gt;</Sliderleft>
+                <Sliderleft> &gt;</Sliderleft>
                 <Sliderright> &gt; </Sliderright>
               </Slider>
             </Review>
@@ -45,6 +47,11 @@ function Reviews() {
                 <Name>Davit millar</Name>
                 <Post>CEO, PParkivew int, Ltd</Post>
               </Requisites>
+              <Rating>
+                {Array.from({ length: 5 }, (__, i) => (
+                  <Star secondary={i + 1 <= 4} />
+                ))}
+              </Rating>
               <Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
                 nisl, tincidunt commodo sit. Et, purus lectus odio cursus

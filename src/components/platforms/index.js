@@ -54,7 +54,7 @@ import {
   Circle,
   Prec,
   ExternalCircle,
-  Legend, 
+  Legend,
   Percent,
   LineBefore,
 } from "./elements";
@@ -161,15 +161,14 @@ function Platforms() {
               <Image src={buy} alt="buy" />
               <PercentageLimit>
                 <ExternalCircle>
-                <ActiveBorder>
-                  <Circle>
-                    <Prec>
-                      0%
-                    </Prec>
-                  </Circle>
-                </ActiveBorder>
+                  <ActiveBorder>
+                    <Circle>
+                      <Prec>0%</Prec>
+                    </Circle>
+                  </ActiveBorder>
                 </ExternalCircle>
-                <Legend>Legend</Legend><Percent>+25%</Percent>
+                <Legend>Legend</Legend>
+                <Percent>+25%</Percent>
               </PercentageLimit>
               <Transaction>
                 <TitleTransaction>New transaction</TitleTransaction>

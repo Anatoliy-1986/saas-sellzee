@@ -4,7 +4,6 @@ export const Container = styled.div`
   background: #fff9f5;
   margin: 0;
   padding: 0;
-  
 `;
 
 export const Wrapper = styled.div`
@@ -12,12 +11,11 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  
+
   max-width: 1134px;
-  margin: 0 auto ;
+  margin: 0 auto;
   padding: 54px 0 74px 0;
 `;
-
 
 export const ViewBlock = styled.div`
   display: flex;
@@ -37,31 +35,31 @@ export const ViewBlock = styled.div`
 `;
 
 export const Discription = styled.div`
-font-weight: 500;
-font-size: 16px;
-line-height: 160%;
-opacity: 0.7;
-margin-top: ${({ margin }) => margin || "0"};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  opacity: 0.7;
+  margin-top: ${({ margin }) => margin || "0"};
 `;
 
 export const Title = styled.div`
-font-weight: 600;
-font-size: 20px;
-line-height: 160%;
-letter-spacing: 0.05em;
-text-transform: uppercase;
-color: #FF5A05;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ff5a05;
 `;
 
 export const SubTitle = styled.div`
-font-weight: bold;
-font-size: 31px;
-line-height: 130%;
-margin-top: 15px;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 130%;
+  margin-top: 15px;
 `;
 
 export const Label = styled.div`
-font-weight: 600;
-font-size: 20px;
-line-height: 160%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
 `;

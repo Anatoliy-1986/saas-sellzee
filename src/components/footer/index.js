@@ -14,30 +14,26 @@ import {
   Title,
   Link,
   Icons,
-  First,
-  Second,
-  Third,
 } from "./elements";
 
 const partners = [
-    {
-        href: "#",
-        icon: <img src={youtube} alt="youtube" />,
-      },
-      {
-        href: "#",
-        icon: <img src={twitter} alt="twitter" />,
-      },
-      {
-        href: "#",
-        icon: <img src={instagram} alt="instagram" />,
-      },
-      {
-        href: "#",
-        icon: <img src={facebook} alt="facebook" />,
-      },
-    
-   ];
+  {
+    href: "#",
+    icon: <img src={youtube} alt="youtube" />,
+  },
+  {
+    href: "#",
+    icon: <img src={twitter} alt="twitter" />,
+  },
+  {
+    href: "#",
+    icon: <img src={instagram} alt="instagram" />,
+  },
+  {
+    href: "#",
+    icon: <img src={facebook} alt="facebook" />,
+  },
+];
 
 function Footer() {
   return (
@@ -46,13 +42,13 @@ function Footer() {
         <Wrapper>
           <Social>
             <img src={logo} alt="logo" height="43px" />
-<Icons>
-            {partners.map((item, index) => (
-              <Connection href={item.href} key={index}>
-                {item.icon}
-              </Connection>
-            ))}
-</Icons>
+            <Icons>
+              {partners.map((item, index) => (
+                <Connection href={item.href} key={index}>
+                  {item.icon}
+                </Connection>
+              ))}
+            </Icons>
           </Social>
           <Menu>
             <Title>SHORT LINKS</Title>
@@ -75,8 +71,7 @@ function Footer() {
             <Link href="#">Download Directly</Link>
           </Menu>
         </Wrapper>
-        <ViewBlock>
-        </ViewBlock>
+        <ViewBlock></ViewBlock>
       </Container>
     </>
   );

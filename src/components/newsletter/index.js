@@ -19,8 +19,7 @@ function Newsletter() {
             We Offer Every Month 20% Off For Our All Subscribers
           </SubTitle>
           <Subscribe>
-            <Email type="text"
-                    placeholder="Email Address" /> 
+            <Email type="text" placeholder="Email Address" />
             <Button> Subscribe </Button>
           </Subscribe>
         </Wrapper>
