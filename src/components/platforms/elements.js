@@ -332,7 +332,7 @@ export const TrackRecord = styled.div`
   justify-content: space-between;
   position: relative;
   box-sizing: border-box;
-  width: 1134px;
+  max-width: 1134px;
   margin: 0 auto;
 `;
 
