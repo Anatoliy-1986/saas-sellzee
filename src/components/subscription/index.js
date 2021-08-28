@@ -1,5 +1,7 @@
 import React from "react";
 import Check from "./images/Check.png";
+import Heart from "./images/Heart.png";
+import Fire from "./images/Fire.png";
 import {
   Container,
   Wrapper,
@@ -16,6 +18,7 @@ import {
   Instal,
   ViewBlock,
   Characteristic,
+  Iconrate,
 } from "./elements";
 
 const packs = [
@@ -25,6 +28,7 @@ const packs = [
     price: "$29",
     pack: "monthly pack",
     href: "https://yandex.ru/",
+    icon: <Iconrate src={Fire} alt="Fire" />,
   },
   {
     id: 2,
@@ -32,6 +36,7 @@ const packs = [
     price: "$39",
     pack: "monthly pack",
     href: "https://www.google.ru/",
+    icon: <Iconrate src={Heart} alt="Heart" />,
   },
 ];
 
@@ -56,6 +61,7 @@ function Subscription() {
           <ViewBlock>
             {packs.map((item, id) => (
               <Standard key={item.id}>
+                <>{item.icon}</>
                 <Headline>{item.type}</Headline>
                 <Price>{item.price}</Price>
                 <Pack>{item.pack}</Pack>

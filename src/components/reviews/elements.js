@@ -69,7 +69,6 @@ export const Textreview = styled.div`
   position: absolute;
   top: 160px;
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;

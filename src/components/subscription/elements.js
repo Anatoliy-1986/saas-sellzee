@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Polygon from "./images/Polygon.png";
 
 export const Container = styled.div`
   background: #ebedff;
@@ -76,12 +77,31 @@ export const Standard = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  position: relative;
   box-sizing: border-box;
+  text-content: center;
   width: 455px;
-  padding: 96px 0 44px;
+
   background: #ffffff;
   border: 1px solid rgba(31, 55, 255, 0.1);
   border-radius: 10px;
+
+  &:before {
+    content: "";
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    background: url(${Polygon});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+`;
+
+export const Iconrate = styled.img`
+  position: absolute;
+  top: 20px;
+  text-align: center;
 `;
 
 export const Headline = styled.div`
@@ -90,6 +110,7 @@ export const Headline = styled.div`
   line-height: 160%;
   text-align: center;
   color: #05000b;
+  margin-top: 96px;
 `;
 
 export const Price = styled.div`
@@ -143,6 +164,6 @@ export const Instal = styled.button`
   color: #ffffff;
   font-size: 18px;
   line-height: 160%;
-  margin-top: 58px;
+  margin: 58px 0 44px;
   text-decoration: none;
 `;
