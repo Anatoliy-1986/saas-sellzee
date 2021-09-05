@@ -66,41 +66,46 @@ const clients = [
     id: 1,
     name: "John",
     avatar: <Img src={John} alt="John" />,
-    money: 0,
+    money: "0",
+    shadow: "none",
   },
   {
     id: 2,
     name: "Monika",
     avatar: <Img src={Monika} alt="Monika" />,
-    money: 0,
+    money: "0",
+    shadow: "none",
   },
   {
     id: 3,
     name: "Mia",
     avatar: <Img src={Mia} alt="Mia" />,
-    money: 0,
+    money: "0",
+    shadow: "none",
   },
   {
     id: 4,
     name: "Ann",
     avatar: <Img src={Ann} alt="Ann" />,
-    money: 0,
+    money: "0",
+    shadow: "none",
   },
   {
     id: 5,
     name: "Mike",
     avatar: <Img src={Mike} alt="Mike" />,
-    money: 0,
+    money: "0",
+    shadow: "none",
   },
 ];
 
 const achievements = [
   {
-    value: 50,
+    value: "50+",
     lable: "Happy Clients",
   },
   {
-    value: 550,
+    value: "550+",
     lable: "Projects Completed",
   },
   {
@@ -108,7 +113,7 @@ const achievements = [
     lable: "Dedicated Members",
   },
   {
-    value: 30,
+    value: "30+",
     lable: "Awards Won",
   },
 ];
@@ -118,6 +123,34 @@ function Platforms() {
 
   const [editId, setEditId] = useState(null);
 
+  const [number, setNumber] = React.useState(0);
+
+  const chooseClient = (currentIndex) => (event) => {
+    const result = client.map((item) =>
+      item.id === currentIndex
+        ? {
+            ...item,
+            shadow: "inset 2px 2px 5px #000000, 1px 1px 5px #000000",
+          }
+        : { ...item, shadow: "none" }
+    );
+    setClient(result);
+
+    setEditId(currentIndex);
+  };
+
+  function sendMoney() {
+    const result = client.map((item) => {
+      return {
+        ...item,
+        shadow: "none",
+      };
+    });
+    setClient(result);
+
+    setEditId(null);
+  };
+
   function getValue(prop) {
     return client.reduce(
       (res, item) => (item.id === editId ? item[prop] : res),
@@ -126,121 +159,124 @@ function Platforms() {
   }
 
   function changeItem(prop, event) {
-    setClient(
-      client.map((item) =>
-        item.id === editId ? { ...item, [prop]: event.target.value } : item
-      )
-    );
-  }
-
-  const AddClients = () => {
-    if (client.length > 4) {
-      const rand = Math.floor(Math.random() * clients.length);
-      setClient([...client, clients[rand]]);
-      const removeButton = document.querySelector(AddClient);
-      removeButton.style.display = "none";
-    } else {
-      const rand = Math.floor(Math.random() * clients.length);
-      setClient([...client, clients[rand]]);
+    if (event.target.value <= 300 && event.target.value >= 0) {
+      setClient(
+        client.map((item) =>
+          item.id === editId ? { ...item, [prop]: event.target.value } : item
+        )
+      );
     }
   };
 
+  //const rand = Math.floor(Math.random() * clients.length);
+
+  const AddClients = () => {
+    if (client.length >= 4) {
+      const removeButton = document.querySelector(AddClient);
+      removeButton.style.display = "none";
+    } else {
+      setNumber((number + 1) % clients.length);
+    }
+    setClient([...client, clients[number]]);
+  };
+
   return (
-    <>
-      <Сontainer>
-        <Wrapper>
-          <Header>
-            {partners.map((item, index) => (
-              <Link href="#" key={index}>
-                <Partner src={item} alt={item} />
-              </Link>
-            ))}
-          </Header>
-          <ViewBlock>
-            <Amenities>
-              <Image src={buy} alt="buy" />
-              <PercentageLimit>
-                <ExternalCircle>
-                  <ActiveBorder>
-                    <Circle>
-                      <Prec>0%</Prec>
-                    </Circle>
-                  </ActiveBorder>
-                </ExternalCircle>
-                <Legend>Legend</Legend>
-                <Percent>+25%</Percent>
-              </PercentageLimit>
-              <Transaction>
-                <TitleTransaction>New transaction</TitleTransaction>
-                <ClientsList>
-                  {client.map((item, id) => (
-                    <Customer key={item.id} onClick={() => setEditId(item.id)}>
-                      <AddMoney>{item.money}</AddMoney>
-                      <AddImg>{item.avatar}</AddImg>
-                      <AddName>{item.name}</AddName>
-                    </Customer>
-                  ))}
-                  <AddClient onClick={AddClients}>
-                    <AddImg>
-                      <img src={Plus} alt="Plus" />
-                    </AddImg>
-                    <AddName>Add New</AddName>
-                  </AddClient>
-                </ClientsList>
-                <SendMoney>
-                  <EnterMoney
-                    type="number"
-                    placeholder="0 $"
-                    onChange={(event) => changeItem("money", event)}
-                    value={getValue("money")}
-                  />
-                  <Transfer onClick={() => setEditId(null)}>
-                    {" "}
-                    Send the transfer &gt;
-                  </Transfer>
-                </SendMoney>
-              </Transaction>
-            </Amenities>
+    <Сontainer>
+      <Wrapper>
+        <Header>
+          {partners.map((item, index) => (
+            <Link href="#" key={index}>
+              <Partner src={item} alt={item} />
+            </Link>
+          ))}
+        </Header>
+        <ViewBlock>
+          <Amenities>
+            <Image src={buy} alt="buy" />
+            <PercentageLimit>
+              <ExternalCircle>
+                <ActiveBorder>
+                  <Circle>
+                    <Prec>0%</Prec>
+                  </Circle>
+                </ActiveBorder>
+              </ExternalCircle>
+              <Legend>Legend</Legend>
+              <Percent>+25%</Percent>
+            </PercentageLimit>
+            <Transaction>
+              <TitleTransaction>New transaction</TitleTransaction>
+              <ClientsList>
+                {client.map((item, id) => (
+                  <Customer
+                    key={item.id}
+                    shadow={item.shadow}
+                    onClick={chooseClient(item.id)}
+                  >
+                    <AddMoney>{item.money}</AddMoney>
+                    <AddImg>{item.avatar}</AddImg>
+                    <AddName>{item.name}</AddName>
+                  </Customer>
+                ))}
+                <AddClient onClick={AddClients}>
+                  <AddImg>
+                    <img src={Plus} alt="Plus" />
+                  </AddImg>
+                  <AddName>Add New</AddName>
+                </AddClient>
+              </ClientsList>
+              <SendMoney>
+                <EnterMoney
+                  type="number"
+                  data-min="1"
+                  data-max="5"
+                  placeholder="0 $"
+                  onChange={(event) => changeItem("money", event)}
+                  value={getValue("money")}
+                />
+                <Transfer onClick={sendMoney}>Send the transfer &gt;</Transfer>
+              </SendMoney>
+            </Transaction>
+          </Amenities>
 
-            <Information>
-              <Title>Lorem ipsum dolor sit ame</Title>
-              <SubTitle>
-                <strong>Simple Solutions for Complex Connections</strong>
-              </SubTitle>
-              <Description>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                donec gravida feugiat neque, ipsum faucibus. Pharetra vel
-                suspendisse mi odio a velit feugiat sapien.
-              </Description>
-              <Qualifications>
-                <Competence>
-                  <Img src={check} alt="check" />
-                  <Skill>High Analysis</Skill>
-                </Competence>
-                <Competence>
-                  <Img src={check} alt="check" />
-                  <Skill>Certified Institute</Skill>
-                </Competence>
-              </Qualifications>
-              <Learn>
-                <Button>Learn More</Button>
-              </Learn>
-            </Information>
-          </ViewBlock>
-        </Wrapper>
+          <Information>
+            <Title>Lorem ipsum dolor sit ame</Title>
+            <SubTitle>
+              <strong>Simple Solutions for Complex Connections</strong>
+            </SubTitle>
+            <Description>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed donec
+              gravida feugiat neque, ipsum faucibus. Pharetra vel suspendisse mi
+              odio a velit feugiat sapien.
+            </Description>
+            <Qualifications>
+              <Competence>
+                <Img src={check} alt="check" />
+                <Skill>High Analysis</Skill>
+              </Competence>
+              <Competence>
+                <Img src={check} alt="check" />
+                <Skill>Certified Institute</Skill>
+              </Competence>
+            </Qualifications>
+            <Learn>
+              <Button>Learn More</Button>
+            </Learn>
+          </Information>
+        </ViewBlock>
+      </Wrapper>
 
-        <LineBefore>
-          <TrackRecord>
-            {achievements.map((item, index) => (
-              <Track key={index}>
-                <Figure>{item.value}</Figure>
-                <Сompletion>{item.lable}</Сompletion>
-              </Track>
-            ))}
-          </TrackRecord>
-        </LineBefore>
-      </Сontainer>
-    </>
+      <LineBefore>
+        <TrackRecord>
+          {achievements.map((item, index) => (
+            <Track key={index}>
+              <Figure>{item.value}</Figure>
+              <Сompletion>{item.lable}</Сompletion>
+            </Track>
+          ))}
+        </TrackRecord>
+      </LineBefore>
+    </Сontainer>
   );
 }
 

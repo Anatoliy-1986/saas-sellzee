@@ -207,7 +207,6 @@ export const Percent = styled.div`
 
 export const Transaction = styled.div`
   font-family: Suprema;
-  font-weight: 400;
   width: 397px;
   height: 202px;
   padding: 21px 40px 28px 40px;
@@ -239,6 +238,7 @@ export const AddClient = styled.button`
 `;
 
 export const ClientsList = styled.div`
+  font-style: italic;
   display: flex;
 `;
 
@@ -246,6 +246,9 @@ export const Customer = styled.div`
   margin-right: 10px;
   position: relative;
   box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: ${({ shadow }) => shadow};
+  border-radius: 5px;
 `;
 
 export const AddName = styled.div`
@@ -265,6 +268,7 @@ export const AddImg = styled.div`
 `;
 
 export const AddMoney = styled.div`
+  display: block;
   width: 20px;
   font-size: 10px;
   position: absolute;
@@ -284,6 +288,8 @@ export const SendMoney = styled.div`
 `;
 
 export const EnterMoney = styled.input`
+  font-family: Lato;
+  font-weight: 300;
   width: 175.32px;
   height: 36.52px;
   font-size: 24px;
@@ -307,6 +313,9 @@ export const Transfer = styled.button`
   background-color: #ff5a05;
   border: none;
   cursor: pointer;
+&: active {
+  box-shadow: inset 2px 2px 5px #000000, 1px 1px 5px #000000;
+}
 `;
 
 export const LineBefore = styled.div`

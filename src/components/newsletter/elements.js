@@ -102,3 +102,34 @@ export const Button = styled.div`
   align-items: center;
   cursor: pointer;
 `;
+
+export const ModalConteiner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  pointer-events: none;
+  opacity: ${(props) => (props.opacity ? props.opacity : "0")};
+  pointer-events: ${({ pointer }) => pointer};
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fdeee7;
+  width: 50vw;
+  height: 400px;
+  transform: ${({ transform }) => transform};
+  transition: 0.4s all;
+`;
