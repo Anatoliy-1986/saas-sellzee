@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "./GlobalStyle.css";
+import {device} from "../../device";
 import Line from "./images/Line.png";
 
 export const Сontainer = styled.div`
@@ -13,7 +13,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  box-sizing: border-box;
   max-width: 1134px;
 `;
 
@@ -45,6 +44,14 @@ export const ViewBlock = styled.div`
   position: relative;
   box-sizing: border-box;
   margin: 107px 0 246px;
+  @media ${device.tablet} {
+    flex-direction: column;
+    padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px;
+  }
+  
 `;
 
 export const Information = styled.div`
@@ -52,6 +59,10 @@ export const Information = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   max-width: 546px;
+  @media ${device.tablet} {
+    margin-top: 20px;
+  }
+  
 `;
 
 export const Title = styled.div`
@@ -78,6 +89,7 @@ export const Description = styled.div`
 
 export const Qualifications = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 25px 0 0;
 `;
@@ -123,6 +135,7 @@ export const Amenities = styled.div`
   display: flex;
   position: relative;
   box-sizing: border-box;
+
 `;
 
 export const Image = styled.img`
@@ -130,6 +143,10 @@ export const Image = styled.img`
   top: -26px;
   left: -168px;
   box-sizing: border-box;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const PercentageLimit = styled.div`
@@ -145,6 +162,9 @@ export const PercentageLimit = styled.div`
   border-radius: 7.7px;
   box-sizing: border-box;
   box-shadow: 20px 30px 70px rgba(3, 7, 37, 0.06);
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const ExternalCircle = styled.div`
@@ -157,6 +177,7 @@ export const ExternalCircle = styled.div`
   height: 80px;
   border-radius: 100%;
   background-color: #ffffff;
+  
 `;
 
 export const ActiveBorder = styled.div`
@@ -184,13 +205,14 @@ export const Circle = styled.div`
 `;
 
 export const Prec = styled.span`
+  font-family: SourceSansPro;
   top: 17px;
   position: relative;
   font-size: 15px;
 `;
 
 export const Legend = styled.div`
-  font-family: Source Han Sans SC;
+  font-family: NotoSansSC;
   font-size: 16px;
   line-height: 24px;
   color: rgba(60, 60, 67, 0.6);
@@ -198,7 +220,7 @@ export const Legend = styled.div`
 `;
 
 export const Percent = styled.div`
-  font-family: SF Pro Text;
+  font-family: SourceSansPro;
   font-size: 13px;
   line-height: 18px;
   color: #7459d9;
@@ -206,7 +228,6 @@ export const Percent = styled.div`
 `;
 
 export const Transaction = styled.div`
-  font-family: Suprema;
   width: 397px;
   height: 202px;
   padding: 21px 40px 28px 40px;
@@ -220,9 +241,13 @@ export const Transaction = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media ${device.tablet} {
+    position: static;
+  }
 `;
 
 export const TitleTransaction = styled.div`
+  font-family: Suprema;
   font-weight: 600;
   font-size: 20px;
 `;
@@ -238,7 +263,6 @@ export const AddClient = styled.button`
 `;
 
 export const ClientsList = styled.div`
-  font-style: italic;
   display: flex;
 `;
 
@@ -252,6 +276,8 @@ export const Customer = styled.div`
 `;
 
 export const AddName = styled.div`
+  font-family: Suprema;
+  font-style: normal;
   font-size: 12px;
   text-align: center;
   color: #404040;
@@ -268,6 +294,7 @@ export const AddImg = styled.div`
 `;
 
 export const AddMoney = styled.div`
+  font-family: Suprema;
   display: block;
   width: 20px;
   font-size: 10px;
@@ -307,16 +334,18 @@ export const Transfer = styled.button`
   height: 36.52px;
   background: #ff5a05;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   color: white;
   background-color: #ff5a05;
   border: none;
   cursor: pointer;
-&: active {
-  box-shadow: inset 2px 2px 5px #000000, 1px 1px 5px #000000;
-}
+  &: active {
+    box-shadow: inset 2px 2px 5px #000000, 1px 1px 5px #000000;
+  }
 `;
+
+// 95626516516516165
 
 export const LineBefore = styled.div`
   position: relative;
@@ -332,6 +361,7 @@ export const LineBefore = styled.div`
     background-position: center;
     width: 100%;
     height: 100%;
+    
   }
 `;
 
@@ -343,6 +373,9 @@ export const TrackRecord = styled.div`
   box-sizing: border-box;
   max-width: 1134px;
   margin: 0 auto;
+  @media ${device.tablet} {
+    justify-content: space-around;
+  }
 `;
 
 export const Track = styled.div`
@@ -352,6 +385,7 @@ export const Track = styled.div`
   background: #ffffff;
   box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.04);
   position: relative;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,6 +400,7 @@ export const Track = styled.div`
     border-top: 110px solid #ffffff;
     border-left: 130px solid transparent;
     border-right: 130px solid transparent;
+    
   }
 `;
 

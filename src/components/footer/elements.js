@@ -1,10 +1,9 @@
 import styled from "styled-components";
+import {device} from "../../device";
 
 export const Container = styled.div`
   background: #000848;
-  position: relative;
   padding: 0;
-  position: relative;
   box-sizing: border-box;
 `;
 
@@ -16,13 +15,15 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   max-width: 1110px;
   padding: 110px 0 53px;
+  @media ${device.tablet} {
+    padding: 110px 15px 53px;
+  }
 `;
 
 export const Social = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   box-sizing: border-box;
 `;
 
@@ -49,6 +50,9 @@ export const Menu = styled.div`
   align-items: flex-start;
   flex-direction: column;
   box-sizing: border-box;
+  @media ${device.tablet} {
+    margin: 15px 0;
+  }
 `;
 
 export const Title = styled.div`

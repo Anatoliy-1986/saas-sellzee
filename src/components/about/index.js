@@ -20,7 +20,6 @@ import {
 
 function About() {
   return (
-    <>
       <Container>
         <Wrapper>
           <Header>
@@ -57,7 +56,6 @@ function About() {
           </ViewBlock>
         </Wrapper>
       </Container>
-    </>
   );
 }
 

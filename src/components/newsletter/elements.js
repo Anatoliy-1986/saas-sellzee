@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import {device} from "../../device";
 
 export const Container = styled.div`
   background: #ffffff;
   position: relative;
   padding: 0;
+  @media ${device.tablet} {
+    padding: 0 15px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -17,6 +21,9 @@ export const Wrapper = styled.div`
   border-radius: 30px;
   position: relative;
   padding: 67px 0 66px;
+  @media ${device.tablet} {
+    margin: 188px auto 121px;
+  }
 
   &:before {
     content: "";
@@ -76,6 +83,10 @@ export const Subscribe = styled.form`
   justify-content: space-between;
   align-items: center;
   padding: 12px;
+  @media ${device.tablet} {
+    max-width:350px;
+    margin: 0 10px;
+  }
 `;
 
 export const Email = styled.input`
@@ -123,6 +134,7 @@ export const ModalContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   font-size: 50px;
   font-weight: 600;
   padding: 20px;

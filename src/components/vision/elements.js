@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {device} from "../../device";
 
 export const Container = styled.div`
   background: #fff9f5;
@@ -11,10 +12,12 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
   max-width: 1134px;
   margin: 0 auto;
   padding: 54px 0 74px 0;
+  @media ${device.tablet} {
+    justify-content: space-around;
+  }
 `;
 
 export const ViewBlock = styled.div`

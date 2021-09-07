@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {device} from "../../device";
 
 export const Container = styled.div`
   background: linear-gradient(264.47deg, #2e43f0 29.39%, #6677ff 93.49%);
@@ -12,12 +13,19 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   box-sizing: border-box;
   max-width: 1134px;
+  @media ${device.tablet} {
+    padding: 0 15px;
+  }
+  @media ${device.mobile} {
+    padding: 0 15px;
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
 `;
 
@@ -25,6 +33,7 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
 `;
 
@@ -36,6 +45,10 @@ export const Link = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+
+  @media ${device.mobile} {
+    margin: 10px 0;
   }
 `;
 
@@ -49,6 +62,9 @@ export const Button = styled.button`
   border: ${(props) => (props.secondary ? "1px solid white" : "none")};
   text-decoration: none;
   cursor: pointer;
+  @media ${device.tablet} {
+    margin: 15px 0;
+  }
 `;
 
 export const ViewBlock = styled.div`
@@ -61,7 +77,6 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   margin: 72px 0 90px;
-  box-sizing: border-box;
   max-width: 418px;
 `;
 
@@ -88,15 +103,17 @@ export const Description = styled.div`
 
 export const Line = styled.div`
   border-bottom: 1px solid #ffffff;
-  width: 418px;
+  max-width: 418px;
   margin-top: 20px;
 `;
 
 export const Navigetion = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 43px 0 0;
   box-sizing: border-box;
+  
 `;
 
 export const Image = styled.img`
@@ -104,4 +121,7 @@ export const Image = styled.img`
   top: 47px;
   left: 525px;
   box-sizing: border-box;
+  @media ${device.mobile} {
+    display: none;
+  }
 `;

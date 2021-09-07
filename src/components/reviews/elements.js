@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Person from "./images/Person.png";
+import {device} from "../../device";
 
 export const Container = styled.div`
   background: #ffffff;
@@ -14,6 +15,9 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   max-width: 1134px;
   padding: 106px 0 121px;
+  @media ${device.tablet} {
+    padding: 106px 15px 121px;
+  }
 `;
 
 export const Header = styled.div`
@@ -45,6 +49,9 @@ export const ViewBlock = styled.div`
   position: relative;
   box-sizing: border-box;
   margin-top: 69px;
+  @media ${device.tablet} {
+    height: 505px;
+    }
 `;
 
 export const Review = styled.div`
@@ -54,6 +61,7 @@ export const Review = styled.div`
   justify-content: space-between;
   position: relative;
   box-sizing: border-box;
+  
 `;
 
 export const Heading = styled.div`
@@ -180,6 +188,9 @@ export const User = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @media ${device.tablet} {
+    display: none;
+  }
 
   &:before {
     content: open-quote;
