@@ -1,16 +1,7 @@
 import styled from "styled-components";
 import {device} from "../../device";
 
-export const Container = styled.div`
-  background: #ffffff;
-  position: relative;
-  padding: 0;
-  @media ${device.tablet} {
-    padding: 0 15px;
-  }
-`;
-
-export const Wrapper = styled.div`
+export const Covering = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,9 +12,6 @@ export const Wrapper = styled.div`
   border-radius: 30px;
   position: relative;
   padding: 67px 0 66px;
-  @media ${device.tablet} {
-    margin: 188px auto 121px;
-  }
 
   &:before {
     content: "";
@@ -50,6 +38,12 @@ export const Wrapper = styled.div`
     border-radius: 30px;
     z-index: -1;
   }
+  @media ${device.tablet} {
+    margin: 100px 15px;
+    &:before, &:after {
+      content: none;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -74,8 +68,7 @@ export const SubTitle = styled.div`
 `;
 
 export const Subscribe = styled.form`
-  width: 562px;
-  height: 77px;
+  max-width: 562px;
   border-radius: 4px;
   border: 1px solid rgba(5, 0, 11, 0.1);
   box-sizing: border-box;
@@ -84,6 +77,8 @@ export const Subscribe = styled.form`
   align-items: center;
   padding: 12px;
   @media ${device.tablet} {
+    flex-wrap: wrap;
+    justify-content: center;
     max-width:350px;
     margin: 0 10px;
   }
@@ -98,6 +93,12 @@ export const Email = styled.input`
   outline: none;
   font-size: 20px;
   line-height: 160%;
+  padding: 0 20px;
+  @media ${device.tablet} {
+    height: 53px;
+    border-radius: 4px;
+  border: 1px solid rgba(5, 0, 11, 0.1);
+  }
 `;
 
 export const Button = styled.div`
@@ -112,6 +113,9 @@ export const Button = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  @media ${device.tablet} {
+    margin: 15px 0 0;
+  }
 `;
 
 export const ModalConteiner = styled.div`

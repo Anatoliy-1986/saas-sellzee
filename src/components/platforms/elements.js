@@ -1,20 +1,7 @@
 import styled from "styled-components";
 import {device} from "../../device";
 import Line from "./images/Line.png";
-
-export const Сontainer = styled.div`
-  background: #ffffff;
-  position: relative;
-  padding: 0;
-  margin: 0;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1134px;
-`;
+import {ViewBlock} from "../shared";
 
 export const Header = styled.div`
   display: flex;
@@ -38,12 +25,7 @@ export const Partner = styled.img`
   align-self: center;
 `;
 
-export const ViewBlock = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  box-sizing: border-box;
-  margin: 107px 0 246px;
+export const Services = styled(ViewBlock)`
   @media ${device.tablet} {
     flex-direction: column;
     padding: 0 15px;
@@ -51,7 +33,6 @@ export const ViewBlock = styled.div`
     align-items: center;
     margin: 50px 0 50px;
   }
-  
 `;
 
 export const Information = styled.div`
@@ -344,8 +325,6 @@ export const Transfer = styled.button`
     box-shadow: inset 2px 2px 5px #000000, 1px 1px 5px #000000;
   }
 `;
-
-// 95626516516516165
 
 export const LineBefore = styled.div`
   position: relative;

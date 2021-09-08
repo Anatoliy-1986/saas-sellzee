@@ -15,13 +15,12 @@ import Ann from "./images/Ann.png";
 import Mia from "./images/Mia.png";
 import Mike from "./images/Mike.png";
 import Monika from "./images/Monika.png";
+import {Container, Wrapper} from "../shared";
 import {
-  Сontainer,
-  Wrapper,
   Header,
   Button,
   Link,
-  ViewBlock,
+  Services,
   Title,
   SubTitle,
   Description,
@@ -168,8 +167,6 @@ function Platforms() {
     }
   };
 
-  //const rand = Math.floor(Math.random() * clients.length);
-
   const AddClients = () => {
     if (client.length >= 4) {
       const removeButton = document.querySelector(AddClient);
@@ -181,8 +178,8 @@ function Platforms() {
   };
 
   return (
-    <Сontainer>
-      <Wrapper>
+    <Container>
+      <Wrapper direction="column" justify="none" align="none">
         <Header>
           {partners.map((item, index) => (
             <Link href="#" key={index}>
@@ -190,7 +187,7 @@ function Platforms() {
             </Link>
           ))}
         </Header>
-        <ViewBlock>
+        <Services margin="107px 0 246px">
           <Amenities>
             <Image src={buy} alt="buy" />
             <PercentageLimit>
@@ -263,7 +260,7 @@ function Platforms() {
               <Button>Learn More</Button>
             </Learn>
           </Information>
-        </ViewBlock>
+        </Services>
       </Wrapper>
 
       <LineBefore>
@@ -276,7 +273,7 @@ function Platforms() {
           ))}
         </TrackRecord>
       </LineBefore>
-    </Сontainer>
+    </Container>
   );
 }
 

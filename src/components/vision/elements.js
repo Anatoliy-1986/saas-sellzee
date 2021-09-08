@@ -1,26 +1,14 @@
 import styled from "styled-components";
 import {device} from "../../device";
+import {Wrapper} from "../shared";
 
-export const Container = styled.div`
-  background: #fff9f5;
-  margin: 0;
-  padding: 0;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1134px;
-  margin: 0 auto;
-  padding: 54px 0 74px 0;
+export const Transition = styled(Wrapper)`
   @media ${device.tablet} {
     justify-content: space-around;
   }
 `;
 
-export const ViewBlock = styled.div`
+export const Offer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

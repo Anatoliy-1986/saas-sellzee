@@ -1,20 +1,8 @@
 import styled from "styled-components";
 import {device} from "../../device";
+import {Wrapper} from "../shared";
 
-export const Container = styled.div`
-  background: #000848;
-  padding: 0;
-  box-sizing: border-box;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  box-sizing: border-box;
-  max-width: 1110px;
-  padding: 110px 0 53px;
+export const Storage = styled(Wrapper)`
   @media ${device.tablet} {
     padding: 110px 15px 53px;
   }
@@ -79,7 +67,7 @@ export const Link = styled.div`
   }
 `;
 
-export const ViewBlock = styled.div`
+export const Underside = styled.div`
   width: 100%;
   height: 125px;
   background: linear-gradient(270.77deg, #000423 -21.37%, #050a59 100.6%);

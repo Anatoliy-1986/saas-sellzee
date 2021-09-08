@@ -1,18 +1,8 @@
 import styled from "styled-components";
-import {device} from "../../device";
+import { device } from "../../device";
+import {Wrapper} from "../shared";
 
-export const Container = styled.div`
-  background: linear-gradient(264.47deg, #2e43f0 29.39%, #6677ff 93.49%);
-  position: relative;
-  padding: 50px 0 71px 0;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  box-sizing: border-box;
-  max-width: 1134px;
+export const Concerning = styled(Wrapper)`
   @media ${device.tablet} {
     padding: 0 15px;
   }
@@ -63,14 +53,8 @@ export const Button = styled.button`
   text-decoration: none;
   cursor: pointer;
   @media ${device.tablet} {
-    margin: 15px 0;
+    margin: 15px 15px;
   }
-`;
-
-export const ViewBlock = styled.div`
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
 `;
 
 export const Information = styled.div`
@@ -113,7 +97,6 @@ export const Navigetion = styled.div`
   flex-wrap: wrap;
   margin: 43px 0 0;
   box-sizing: border-box;
-  
 `;
 
 export const Image = styled.img`

@@ -1,11 +1,11 @@
 import React from "react";
+import {Container} from "../shared";
 import {
-  Container,
-  Wrapper,
+  Judgment,
   Header,
   Title,
   SubTitle,
-  ViewBlock,
+  Comment,
   Review,
   User,
   Heading,
@@ -25,7 +25,7 @@ function Reviews() {
   return (
     <>
       <Container>
-        <Wrapper>
+        <Judgment direction="column" padding="106px 0 121px" align="none">
           <Header>
             <Title>User’s Review</Title>
             <SubTitle>
@@ -33,16 +33,10 @@ function Reviews() {
               mobile and tablet don't let slow
             </SubTitle>
           </Header>
-          <ViewBlock>
+          <Comment margin="69px 0 0">
             <Review>
               <Heading>What People Say About Us</Heading>
-              <Slider>
-                <Sliderleft> &gt;</Sliderleft>
-                <Sliderright> &gt; </Sliderright>
-              </Slider>
-            </Review>
-            <User></User>
-            <Textreview>
+              <Textreview>
               <Requisites>
                 <Name>Davit millar</Name>
                 <Post>CEO, PParkivew int, Ltd</Post>
@@ -58,8 +52,14 @@ function Reviews() {
                 placerat leo, non etiam. Neque at leo risus orci,{" "}
               </Text>
             </Textreview>
-          </ViewBlock>
-        </Wrapper>
+              <Slider>
+                <Sliderleft> &gt;</Sliderleft>
+                <Sliderright> &gt; </Sliderright>
+              </Slider>
+            </Review>
+            <User></User>
+          </Comment>
+        </Judgment>
       </Container>
     </>
   );

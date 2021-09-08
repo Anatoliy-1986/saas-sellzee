@@ -1,13 +1,12 @@
 import React from "react";
 import pad from "./pad.png";
 import logo from "./logo.png";
+import {Container, ViewBlock} from "../shared";
 import {
-  Container,
-  Wrapper,
+  Concerning,
   Header,
   Menu,
   Button,
-  ViewBlock,
   Title,
   SubTitle,
   Description,
@@ -20,8 +19,8 @@ import {
 
 function About() {
   return (
-      <Container>
-        <Wrapper>
+      <Container background="linear-gradient(264.47deg, #2e43f0 29.39%, #6677ff 93.49%)">
+        <Concerning direction="column" align="none" padding="50px 0 71px 0">
           <Header>
             <img src={logo} alt="logo" height="43px" />
             <Menu align="center" justify="space-between">
@@ -54,7 +53,7 @@ function About() {
             </Information>
             <Image src={pad} alt="pad" />
           </ViewBlock>
-        </Wrapper>
+        </Concerning>
       </Container>
   );
 }

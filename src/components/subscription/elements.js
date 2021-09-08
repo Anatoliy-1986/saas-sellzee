@@ -1,25 +1,11 @@
 import styled from "styled-components";
 import Polygon from "./images/Polygon.png";
 import { device } from "../../device";
+import {Wrapper} from "../shared";
 
-export const Container = styled.div`
-  background: #ebedff;
-  position: relative;
-  padding: 0;
-  box-sizing: border-box;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-  box-sizing: border-box;
-  max-width: 1134px;
-  padding: 63px 0 338px;
+export const Package = styled(Wrapper)`
   @media ${device.tablet} {
-    padding: 63px 0 50px;
+    padding: 63px 15px 50px;
   }
 `;
 
@@ -36,11 +22,13 @@ export const Period = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 357px;
+  width: 350px;
   background: #ffffff;
   border-radius: 10px;
   padding: 15px 10px;
   margin-top: 25px;
+  @media ${device.tablet} {
+  }
 `;
 
 export const Month = styled.button`
@@ -66,7 +54,7 @@ export const Year = styled.button`
   font-size: 20px;
 `;
 
-export const ViewBlock = styled.div`
+export const Complex = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -79,7 +67,8 @@ export const ViewBlock = styled.div`
   @media ${device.tablet} {
     max-width: 455px;
     position: static;
-    margin-top: 30px;
+    margin: 30px 0 0;
+    padding: 0;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -93,7 +82,7 @@ export const Standard = styled.div`
   position: relative;
   box-sizing: border-box;
   text-content: center;
-  width: 455px;
+  padding: 0 5%;
   background: #ffffff;
   border: 1px solid rgba(31, 55, 255, 0.1);
   border-radius: 10px;

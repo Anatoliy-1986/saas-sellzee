@@ -2,9 +2,9 @@ import React from "react";
 import Check from "./images/Check.png";
 import Heart from "./images/Heart.png";
 import Fire from "./images/Fire.png";
+import {Container} from "../shared";
 import {
-  Container,
-  Wrapper,
+  Package,
   Title,
   Period,
   Month,
@@ -16,7 +16,7 @@ import {
   Equipment,
   Description,
   Instal,
-  ViewBlock,
+  Complex,
   Characteristic,
   Iconrate,
 } from "./elements";
@@ -50,15 +50,14 @@ const specifications = [
 
 function Subscription() {
   return (
-    <>
-      <Container>
-        <Wrapper>
+      <Container background="#ebedff">
+        <Package direction="column" position="relative" padding="63px 0 338px">
           <Title>Without Extra Charge Choose Your Best Plan</Title>
           <Period>
             <Month> Monthly </Month>
             <Year> Yearly </Year>
           </Period>
-          <ViewBlock>
+          <Complex>
             {packs.map((item, id) => (
               <Standard key={item.id}>
                 <>{item.icon}</>
@@ -78,10 +77,9 @@ function Subscription() {
                 </form>
               </Standard>
             ))}
-          </ViewBlock>
-        </Wrapper>
+          </Complex>
+        </Package>
       </Container>
-    </>
   );
 }
 

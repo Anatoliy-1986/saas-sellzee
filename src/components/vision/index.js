@@ -5,10 +5,10 @@ import Blog from "./images/Blog.png";
 import Friendly from "./images/Friendly.png";
 import Showcase from "./images/Showcase.png";
 import Use from "./images/Use.png";
+import {Container} from "../shared";
 import {
-  Container,
-  Wrapper,
-  ViewBlock,
+  Transition,
+  Offer,
   Discription,
   Label,
   Title,
@@ -65,27 +65,25 @@ const advantage = [
 
 function Vision() {
   return (
-    <>
-      <Container>
-        <Wrapper width="1134px" margin=" 0 auto">
-          <ViewBlock justify="stretch" padding="0" border="none">
+      <Container background="#fff9f5">
+        <Transition wrap="wrap" padding="54px 0 74px 0">
+          <Offer justify="stretch" padding="0" border="none">
             <Title>Your Vision, Our Future.</Title>
             <SubTitle>Committed to People, Committed </SubTitle>
             <Discription margin="20px">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
             </Discription>
-          </ViewBlock>
+          </Offer>
 
           {advantage.map((item, id) => (
-            <ViewBlock key={id} background={item.background} color={item.color}>
+            <Offer key={id} background={item.background} color={item.color}>
               <div>{item.icon}</div>
               <Label>{item.label}</Label>
               <Discription>{item.discription}</Discription>
-            </ViewBlock>
+            </Offer>
           ))}
-        </Wrapper>
+        </Transition>
       </Container>
-    </>
   );
 }
 export default Vision;

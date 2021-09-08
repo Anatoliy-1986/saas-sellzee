@@ -4,13 +4,13 @@ import youtube from "./images/youtube.png";
 import twitter from "./images/twitter.png";
 import instagram from "./images/instagram.png";
 import facebook from "./images/facebook.png";
+import {Container} from "../shared";
 import {
-  Container,
-  Wrapper,
+  Storage,
   Social,
   Menu,
   Connection,
-  ViewBlock,
+  Underside,
   Title,
   Link,
   Icons,
@@ -37,9 +37,8 @@ const partners = [
 
 function Footer() {
   return (
-    <>
-      <Container>
-        <Wrapper>
+      <Container background="#000848">
+        <Storage wrap="wrap" width="1110px" padding="110px 0 53px">
           <Social>
             <img src={logo} alt="logo" height="43px" />
             <Icons>
@@ -70,10 +69,9 @@ function Footer() {
             <Link href="#">Apple App Store</Link>
             <Link href="#">Download Directly</Link>
           </Menu>
-        </Wrapper>
-        <ViewBlock></ViewBlock>
+        </Storage>
+        <Underside></Underside>
       </Container>
-    </>
   );
 }
 

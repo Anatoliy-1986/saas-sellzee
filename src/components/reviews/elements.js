@@ -1,22 +1,11 @@
 import styled from "styled-components";
 import Person from "./images/Person.png";
-import {device} from "../../device";
+import { device } from "../../device";
+import {Wrapper, ViewBlock} from "../shared";
 
-export const Container = styled.div`
-  background: #ffffff;
-  position: relative;
-  padding: 0;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  box-sizing: border-box;
-  max-width: 1134px;
-  padding: 106px 0 121px;
+export const Judgment = styled(Wrapper)`
   @media ${device.tablet} {
-    padding: 106px 15px 121px;
+    padding: 100px 15px 100px;
   }
 `;
 
@@ -32,10 +21,11 @@ export const Title = styled.div`
   font-weight: bold;
   font-size: 49px;
   line-height: 120%;
+  text-align: center;
 `;
 
 export const SubTitle = styled.div`
-  width: 494px;
+  max-width: 494px;
   font-size: 16px;
   line-height: 160%;
   text-align: center;
@@ -43,15 +33,11 @@ export const SubTitle = styled.div`
   margin-top: 25px;
 `;
 
-export const ViewBlock = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  box-sizing: border-box;
-  margin-top: 69px;
+export const Comment = styled(ViewBlock)`
   @media ${device.tablet} {
-    height: 505px;
-    }
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Review = styled.div`
@@ -61,11 +47,15 @@ export const Review = styled.div`
   justify-content: space-between;
   position: relative;
   box-sizing: border-box;
-  
+  @media ${device.tablet} {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const Heading = styled.div`
-  display: flex;
+  text-align: center;
   font-weight: 600;
   font-size: 31px;
   line-height: 160%;
@@ -80,16 +70,23 @@ export const Textreview = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 655px;
-  height: 236px;
+  max-width: 655px;
   background: #ffffff;
   box-shadow: 13px 13px 31px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  @media ${device.tablet} {
+    position: static;
+  }
 `;
 
 export const Rating = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-right: 30px;
+  @media ${device.tablet} {
+    justify-content: center;
+    margin: 0;
+  }
 `;
 
 export const Star = styled.div`
@@ -150,11 +147,15 @@ export const Requisites = styled.div`
   position: absolute;
   top: -36px;
   box-sizing: border-box;
-  width: 373px;
-  height: 129px;
   background: #ffffff;
   box-shadow: 13px 13px 31px rgba(0, 0, 0, 0.05);
-  padding: 31px 0 31px 30px;
+  padding: 31px 121px 31px 30px;
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    padding: 15px;
+  }
 `;
 
 export const Name = styled.div`
@@ -172,11 +173,14 @@ export const Post = styled.div`
 
 export const Text = styled.div`
   width: 515px;
-  height: 74px;
   font-style: italic;
   font-size: 16px;
   line-height: 160%;
-  padding: 20px 110px 30px 30px;
+  padding: 70px 110px 30px 30px;
+  @media ${device.tablet} {
+    max-width: 340px;
+    padding: 15px;
+  }
 `;
 
 export const User = styled.div`
@@ -218,6 +222,9 @@ export const Slider = styled.div`
   justify-content: space-between;
   width: 103px;
   margin-left: 275px;
+  @media ${device.tablet} {
+    margin: 15px 0 0;
+  }
 `;
 
 export const Sliderleft = styled.button`

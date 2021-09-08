@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import {Container} from "../shared";
 import {
-  Container,
-  Wrapper,
+  Covering,
   Title,
   SubTitle,
   Subscribe,
@@ -30,7 +30,7 @@ function Newsletter() {
 
   return (
     <Container>
-      <Wrapper>
+      <Covering>
         <Title>NEWSLETTER</Title>
         <SubTitle>
           We Offer Every Month 20% Off For Our All Subscribers
@@ -44,7 +44,7 @@ function Newsletter() {
           />
           <Button onClick={() => setModalActive(true)}> Subscribe </Button>
         </Subscribe>
-      </Wrapper>
+      </Covering>
 
       <ModalConteiner
         opacity={modalActive ? "1" : "0"}
