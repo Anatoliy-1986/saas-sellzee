@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import {Container} from "../shared";
+import { Container } from "../shared";
+import { useRef } from "react";
 import {
   Covering,
   Title,
@@ -15,18 +16,14 @@ import {
 function Newsletter() {
   const [modalActive, setModalActive] = useState(false);
 
-  const [value, setValue] = useState();
+  const inputRef = useRef("");
 
-  function enteryEmail(event) {
-    setValue(event.target.value);
-  }
+  const inputElement = inputRef.current;
 
   function sendEmail() {
     setModalActive(false);
-    setValue("");
+    inputElement.value = "";
   }
-
-
 
   return (
     <Container>
@@ -36,12 +33,7 @@ function Newsletter() {
           We Offer Every Month 20% Off For Our All Subscribers
         </SubTitle>
         <Subscribe>
-          <Email
-            type="text"
-            onChange={enteryEmail}
-            placeholder="Email Address"
-            value={value}
-          />
+          <Email type="text" placeholder="Email Address" ref={inputRef} />
           <Button onClick={() => setModalActive(true)}> Subscribe </Button>
         </Subscribe>
       </Covering>
@@ -55,11 +47,10 @@ function Newsletter() {
           transform={modalActive ? "scale(1)" : "scale(0.5)"}
           onClick={(e) => e.stopPropagation()}
         >
-          {value}
+          {inputElement.value}
         </ModalContent>
       </ModalConteiner>
     </Container>
   );
 }
-
 export default Newsletter;

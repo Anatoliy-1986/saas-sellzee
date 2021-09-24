@@ -28,6 +28,7 @@ export const Period = styled.div`
   padding: 15px 10px;
   margin-top: 25px;
   @media ${device.tablet} {
+
   }
 `;
 
@@ -65,7 +66,7 @@ export const Complex = styled.div`
   box-sizing: border-box;
   margin: 0 auto;
   @media ${device.tablet} {
-    max-width: 455px;
+    max-width: 350px;
     position: static;
     margin: 30px 0 0;
     padding: 0;
@@ -82,7 +83,7 @@ export const Standard = styled.div`
   position: relative;
   box-sizing: border-box;
   text-content: center;
-  padding: 0 5%;
+  padding: 0 5px;
   background: #ffffff;
   border: 1px solid rgba(31, 55, 255, 0.1);
   border-radius: 10px;

@@ -6,9 +6,6 @@ export const Concerning = styled(Wrapper)`
   @media ${device.tablet} {
     padding: 0 15px;
   }
-  @media ${device.mobile} {
-    padding: 0 15px;
-  }
 `;
 
 export const Header = styled.div`

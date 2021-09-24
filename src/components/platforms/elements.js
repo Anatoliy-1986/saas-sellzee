@@ -221,9 +221,13 @@ export const Transaction = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   @media ${device.tablet} {
+  width: 350px;
+    
     position: static;
+    padding: 20px;
   }
 `;
 
@@ -263,7 +267,7 @@ export const AddName = styled.div`
   text-align: center;
   color: #404040;
   margin-top: ${({ margin }) => margin || "0"};
-  width: 100%;
+  
 `;
 
 export const AddImg = styled.div`
@@ -292,7 +296,7 @@ export const SendMoney = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
-  width: 100%;
+  
 `;
 
 export const EnterMoney = styled.input`
@@ -323,6 +327,9 @@ export const Transfer = styled.button`
   cursor: pointer;
   &: active {
     box-shadow: inset 2px 2px 5px #000000, 1px 1px 5px #000000;
+  }
+  @media ${device.tablet} {
+    
   }
 `;
 

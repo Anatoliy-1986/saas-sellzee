@@ -146,6 +146,12 @@ export const ModalContent = styled.div`
   background-color: #fdeee7;
   width: 50vw;
   height: 400px;
+  box-sizing: border-box;
   transform: ${({ transform }) => transform};
   transition: 0.4s all;
+  @media ${device.tablet} {
+    width: 350px;
+  height: 200px;
+  font-size: 25px;
+  }
 `;

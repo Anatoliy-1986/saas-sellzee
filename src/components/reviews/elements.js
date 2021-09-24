@@ -101,10 +101,7 @@ export const Star = styled.div`
     ${(prop) => (prop.secondary ? "#FFE816" : "#FFF9C7")};
   border-left: 15px solid transparent;
   margin-left: 10px;
-  -moz-transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
   &:before {
     height: 0;
     width: 0;
@@ -117,10 +114,7 @@ export const Star = styled.div`
     border-left: 4.5px solid transparent;
     border-right: 4.5px solid transparent;
     content: "";
-    -webkit-transform: rotate(-35deg);
-    -moz-transform: rotate(-35deg);
-    -ms-transform: rotate(-35deg);
-    -o-transform: rotate(-35deg);
+    transform: rotate(-35deg);
   }
 
   &:after {
@@ -136,10 +130,7 @@ export const Star = styled.div`
     border-bottom: 10.5px solid
       ${(prop) => (prop.secondary ? "#FFE816" : "#FFF9C7")};
     border-left: 15px solid transparent;
-    -webkit-transform: rotate(-70deg);
-    -moz-transform: rotate(-70deg);
-    -ms-transform: rotate(-70deg);
-    -o-transform: rotate(-70deg);
+   transform: rotate(-70deg);
   }
 `;
 
@@ -159,7 +150,6 @@ export const Requisites = styled.div`
 `;
 
 export const Name = styled.div`
-  font-style: normal;
   font-weight: 600;
   font-size: 25px;
   line-height: 160%;

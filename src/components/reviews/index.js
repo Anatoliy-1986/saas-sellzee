@@ -43,7 +43,9 @@ function Reviews() {
               </Requisites>
               <Rating>
                 {Array.from({ length: 5 }, (__, i) => (
+                  <div key={i}>
                   <Star secondary={i + 1 <= 4} />
+                  </div>
                 ))}
               </Rating>
               <Text>
