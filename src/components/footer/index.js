@@ -1,0 +1,78 @@
+import React from "react";
+import logo from "./images/logo.png";
+import youtube from "./images/youtube.png";
+import twitter from "./images/twitter.png";
+import instagram from "./images/instagram.png";
+import facebook from "./images/facebook.png";
+import {Container} from "../shared";
+import {
+  Storage,
+  Social,
+  Menu,
+  Connection,
+  Underside,
+  Title,
+  Link,
+  Icons,
+} from "./elements";
+
+const partners = [
+  {
+    href: "#",
+    icon: <img src={youtube} alt="youtube" />,
+  },
+  {
+    href: "#",
+    icon: <img src={twitter} alt="twitter" />,
+  },
+  {
+    href: "#",
+    icon: <img src={instagram} alt="instagram" />,
+  },
+  {
+    href: "#",
+    icon: <img src={facebook} alt="facebook" />,
+  },
+];
+
+function Footer() {
+  return (
+      <Container background="#000848">
+        <Storage wrap="wrap" width="1110px" padding="110px 0 53px">
+          <Social>
+            <img src={logo} alt="logo" height="43px" />
+            <Icons>
+              {partners.map((item, index) => (
+                <Connection href={item.href} key={index}>
+                  {item.icon}
+                </Connection>
+              ))}
+            </Icons>
+          </Social>
+          <Menu>
+            <Title>SHORT LINKS</Title>
+            <Link href="#">Home</Link>
+            <Link href="#">Services</Link>
+            <Link href="#">Screenshots</Link>
+            <Link href="#">contact</Link>
+          </Menu>
+          <Menu>
+            <Title>HELP LINK</Title>
+            <Link href="#">How to download</Link>
+            <Link href="#">How it work</Link>
+            <Link href="#">Video tutorial</Link>
+            <Link href="#">FAQ</Link>
+          </Menu>
+          <Menu>
+            <Title>SHORT LINKS</Title>
+            <Link href="#">Google Play Store</Link>
+            <Link href="#">Apple App Store</Link>
+            <Link href="#">Download Directly</Link>
+          </Menu>
+        </Storage>
+        <Underside></Underside>
+      </Container>
+  );
+}
+
+export default Footer;
